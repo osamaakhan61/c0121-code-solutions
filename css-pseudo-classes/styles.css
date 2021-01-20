@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+input {
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  font-size: large;
+}
+
+input:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+thead {
+  background-color: black;
+  color: white;
+}
+
+tr {
+  margin: 1px;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #c9c9c9;
+}
