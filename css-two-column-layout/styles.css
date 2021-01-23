@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.text {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(128, 128, 128);
+}
+
+.column-full {
+  margin: 0 auto;
+  padding-top: 15px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.column-half {
+  display: flex;
+  margin: 25px;
+  flex-basis: 30%;
+}
+
+.column-full > .header {
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+
+.column-half > section {
+  position: relative;
+  top: 45px;
+}
+
+.learnmore {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 8px 40px;
+  border: 2px solid #ff4500;
+  background-color: white;
+  color: #ff4500;
+}
