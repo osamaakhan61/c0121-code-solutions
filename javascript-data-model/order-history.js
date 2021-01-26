@@ -13,8 +13,7 @@ var orderHistory = [
         cost: 31.55,
         returnWindow: '09/07/20'
       }
-    ],
-    items: 1
+    ]
   },
   {
     orderPlaced: '07/19/20',
@@ -30,8 +29,7 @@ var orderHistory = [
         cost: 41.33,
         returnWindow: '08/19/20'
       }
-    ],
-    items: 1
+    ]
   },
   {
     orderPlaced: '07/04/20',
@@ -47,8 +45,7 @@ var orderHistory = [
         cost: 15.98,
         returnWindow: '08/05/20'
       }
-    ],
-    items: 1
+    ]
   },
   {
     orderPlaced: '07/03/20',
@@ -71,7 +68,6 @@ var orderHistory = [
         cost: 33.99,
         returnWindow: '08/04/20'
       }
-    ],
-    items: 2
+    ]
   }
 ];
