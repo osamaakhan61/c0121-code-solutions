@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.link,
+.contact {
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(161, 161, 161);
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 5%;
+  border-bottom: 1px solid;
+  border-color: rgb(161, 161, 161, 0.3);
+}
+
+.canvas-logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.link {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.contact {
+  background-color: rgb(23, 62, 100);
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.background-image-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/hero.jpg');
+  background-size: cover;
+  padding: 100px 5%;
+  margin: 75px;
+}
+
+.text-header {
+  font-family: 'Tiempos Headline', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: white;
+  font-size: 48px;
+}
+
+.text {
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  padding-top: 15px;
+  flex-basis: content;
+  line-height: 32px;
+}
+
+.gbutton {
+  background-color: rgb(23, 62, 100);
+  color: white;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 50px;
+  font-size: 24px;
+}
