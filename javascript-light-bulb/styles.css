@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  background-color: rgb(255, 253, 219);
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.lightbulb {
+  padding: 200px 200px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(245, 255, 111);
+}
+
+.lightbulb:focus {
+  outline: none;
+  border-color: transparent;
+}
+
+.black {
+  background-color: rgb(0, 0, 0);
+}
+
+.off {
+  padding: 200px 200px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(61, 61, 61);
+}
+
+.off:focus {
+  outline: none;
+  border-color: transparent;
+}
