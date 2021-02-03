@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.purple {
+  padding: 10px 45px;
+  margin: 10px 10px;
+  background-color: rgb(83, 55, 245);
+  color: white;
+  font-size: 32px;
+  border-radius: 8px;
+  box-shadow: 1px 3px 3px rgb(97, 97, 97);
+}
+
+.modal {
+  display: none;
+}
