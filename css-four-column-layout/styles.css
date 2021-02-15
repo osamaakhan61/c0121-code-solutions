@@ -11,3 +11,27 @@
   width: 25%;
   text-align: center;
 }
+
+h1,
+h2 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  padding-top: 20px;
+}
+
+.icon-container {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
+}
+
+.icon {
+  width: 100%;
+}
