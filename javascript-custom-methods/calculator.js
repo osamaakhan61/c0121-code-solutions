@@ -16,13 +16,18 @@ var calculator = {
     return x * x;
   },
   sumAll: function (numbers) {
-    var reducer = (accumulator, currentValue) => accumulator + currentValue;
-    return numbers.reduce(reducer);
+    var sum = 0;
+    for (var i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+    }
+    return sum;
   },
   getAverage: function (numbers) {
-    var reducer = (accumulator, currentValue) => accumulator + currentValue;
-    var sumTotal = numbers.reduce(reducer);
-    return sumTotal / numbers.length;
+    var sum = 0;
+    for (var i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+    }
+    return sum / numbers.length;
   }
 }
 ;
