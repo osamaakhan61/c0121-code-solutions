@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column-one-fourth {
+  width: 25%;
+  text-align: center;
+}
