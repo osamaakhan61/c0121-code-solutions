@@ -25,6 +25,12 @@ header {
 .canvas-logo {
   cursor: pointer;
   margin-right: auto;
+  width: 200px;
+  height: 30px;
+}
+
+.canvas-blue {
+  width: 100%;
 }
 
 .link {
@@ -35,9 +41,14 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: inherit;
+}
+
 .link li {
   display: inline-block;
   padding: 0 20px;
+  color: gray;
 }
 
 .contact {
@@ -85,4 +96,51 @@ a {
   cursor: pointer;
   margin-top: 50px;
   font-size: 24px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column-half {
+  width: 50%;
+  text-align: center;
+}
+
+.locations-header {
+  font-family: 'Tiempos Headline', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+
+.locations {
+  background-color: rgb(243, 245, 235, 0.7);
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 100px 0;
+  margin: 0 40px;
+  color: rgb(46, 46, 46, 0.8);
+}
+
+.locations-list {
+  font-size: 20px;
+  list-style: none;
+  padding-top: 40px;
+}
+
+.locations-list li {
+  padding-top: 30px;
+}
+
+.column-full {
+  text-align: center;
+}
+
+.location-sub-head {
+  line-height: 1.6;
 }
