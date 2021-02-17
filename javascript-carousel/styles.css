@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-container {
+  border: 3px solid black;
+  width: 40%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pokemon {
+  width: 90%;
+}
+
+.hidden {
+  display: none;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 3em;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover {
+  color: red;
+}
+
+.circle-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-circle {
+  padding: 0 4px;
+  cursor: pointer;
+}
