@@ -13,7 +13,8 @@
   color: rgb(161, 161, 161);
 }
 
-header {
+header,
+.learn-more {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -22,14 +23,16 @@ header {
   border-color: rgb(161, 161, 161, 0.3);
 }
 
-.canvas-logo {
+.canvas-logo,
+.canvas-logo-white {
   cursor: pointer;
   margin-right: auto;
   width: 200px;
   height: 30px;
 }
 
-.canvas-blue {
+.canvas-blue,
+.canvas-white {
   width: 100%;
 }
 
@@ -76,7 +79,8 @@ a:visited {
   font-size: 48px;
 }
 
-.text {
+.text,
+.address {
   font-family: 'Avenir', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -87,7 +91,8 @@ a:visited {
   line-height: 32px;
 }
 
-.gbutton {
+.gbutton,
+.gbutton-mid {
   background-color: rgb(23, 62, 100);
   color: white;
   padding: 20px 50px;
@@ -108,7 +113,9 @@ a:visited {
   text-align: center;
 }
 
-.locations-header {
+.locations-header,
+.left-header,
+.left-sub-header {
   font-family: 'Tiempos Headline', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -143,4 +150,71 @@ a:visited {
 
 .location-sub-head {
   line-height: 1.6;
+}
+
+.left-side-header {
+  margin-right: auto;
+  color: rgb(46, 46, 46, 0.8);
+  margin-top: 42px;
+}
+
+.left-sub-header {
+  font-size: 18px;
+}
+
+.gbutton-mid {
+  align-content: center;
+}
+
+.links {
+  padding: 20px 20px;
+}
+
+.company-info-section {
+  height: 600px;
+  background-color: rgb(59, 59, 59);
+}
+
+.canvas-logo-white {
+  margin-bottom: 30px;
+}
+
+.one-row {
+  display: flex;
+  padding-top: 200px;
+}
+
+.column-one-half {
+  margin-left: 92px;
+}
+
+.left-side-links {
+  padding: 60px 65px;
+}
+
+.info-list > li {
+  padding-top: 20px;
+}
+
+.info-list,
+.info-list-header {
+  list-style: none;
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+
+.info-list-header {
+  font-size: 24px;
+}
+
+.column-one-fourth {
+  margin-left: auto;
+}
+
+.column-one-fourth-2 {
+  margin-left: 300px;
+  margin-right: 300px;
 }
