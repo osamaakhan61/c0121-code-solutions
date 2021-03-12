@@ -33,4 +33,5 @@ html {
 
 .incorrect-char {
   color: red;
+  text-decoration: underline;
 }
