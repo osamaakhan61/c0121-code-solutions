@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.link,
+.contact {
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(161, 161, 161);
+}
+
+header,
+.learn-more {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 5%;
+  border-bottom: 1px solid;
+  border-color: rgb(161, 161, 161, 0.3);
+}
+
+.canvas-logo,
+.canvas-logo-white {
+  cursor: pointer;
+  margin-right: auto;
+  width: 200px;
+  height: 30px;
+}
+
+.canvas-blue,
+.canvas-white {
+  width: 100%;
+}
+
+.link {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.link li {
+  display: inline-block;
+  padding: 0 20px;
+  color: gray;
+}
+
+.contact {
+  background-color: rgb(23, 62, 100);
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.background-image-box {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/hero.jpg');
+  background-size: cover;
+  padding: 100px 5%;
+  margin: 75px;
+}
+
+.text-header {
+  font-family: 'Tiempos Headline', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: white;
+  font-size: 48px;
+}
+
+.text,
+.address {
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  padding-top: 15px;
+  flex-basis: content;
+  line-height: 32px;
+}
+
+.gbutton,
+.gbutton-mid {
+  background-color: rgb(23, 62, 100);
+  color: white;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 50px;
+  font-size: 24px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column-half {
+  width: 50%;
+  text-align: center;
+}
+
+.locations-header,
+.left-header,
+.left-sub-header {
+  font-family: 'Tiempos Headline', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+
+.locations {
+  background-color: rgb(243, 245, 235, 0.7);
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 100px 0;
+  margin: 0 40px;
+  color: rgb(46, 46, 46, 0.8);
+}
+
+.locations-list {
+  font-size: 20px;
+  list-style: none;
+  padding-top: 40px;
+}
+
+.locations-list li {
+  padding-top: 30px;
+}
+
+.column-full {
+  text-align: center;
+}
+
+.location-sub-head {
+  line-height: 1.6;
+}
+
+.left-side-header {
+  margin-right: auto;
+  color: rgb(46, 46, 46, 0.8);
+  margin-top: 42px;
+}
+
+.left-sub-header {
+  font-size: 18px;
+}
+
+.gbutton-mid {
+  align-content: center;
+}
+
+.links {
+  padding: 20px 20px;
+}
+
+.company-info-section {
+  height: 600px;
+  background-color: rgb(59, 59, 59);
+}
+
+.canvas-logo-white {
+  margin-bottom: 30px;
+}
+
+.one-row {
+  display: flex;
+  padding-top: 200px;
+}
+
+.column-one-half {
+  margin-left: 92px;
+}
+
+.left-side-links {
+  padding: 60px 65px;
+}
+
+.info-list > li {
+  padding-top: 20px;
+}
+
+.info-list,
+.info-list-header {
+  list-style: none;
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+
+.info-list-header {
+  font-size: 24px;
+}
+
+.column-one-fourth {
+  margin-left: auto;
+}
+
+.column-one-fourth-2 {
+  margin-left: 300px;
+  margin-right: 300px;
+}
