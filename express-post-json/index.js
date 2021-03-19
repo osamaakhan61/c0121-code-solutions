@@ -15,11 +15,10 @@ app.get('/api/grades', (req, res) => {
 
 app.post('/api/grades', (req, res) => {
   req.body.id = nextId;
-  res.send(req.body);
+  res.status(201).json(req.body);
 
-  grades[''] = req.body;
+  grades[req.body.id] = req.body;
   nextId++;
-  res.status(201);
 });
 app.listen(3000, () => {
   console.log('Listening very intently to your request!');
