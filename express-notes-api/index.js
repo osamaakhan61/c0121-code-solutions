@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const fs = require('fs');
 const data = require('./data.json');
 const error = {
   error: 'id must be a positive integer'
@@ -50,6 +51,10 @@ app.post('/api/notes', (req, res) => {
 
     res.send(req.body);
     data.nextId++;
+    const newInput = JSON.stringify(data, null, 2);
+    fs.writeFile('data.json', newInput, 'utf8', err => {
+      if (err) throw err;
+    });
   }
 });
 
@@ -66,6 +71,10 @@ app.delete('/api/notes/:id', (req, res) => {
     } else {
       delete data.notes[req.params.id];
       res.status(204).json();
+      const newInput = JSON.stringify(data, null, 2);
+      fs.writeFile('data.json', newInput, 'utf8', err => {
+        if (err) throw err;
+      });
     }
   }
 });
@@ -91,6 +100,10 @@ app.put('/api/notes/:id', (req, res) => {
     req.body.id = parseInt(req.params.id);
     data.notes[req.params.id] = req.body;
     res.status(200).json(req.body);
+    const newInput = JSON.stringify(data, null, 2);
+    fs.writeFile('data.json', newInput, 'utf8', err => {
+      if (err) throw err;
+    });
   }
 });
 // Lets user know server is listening
