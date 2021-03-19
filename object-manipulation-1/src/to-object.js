@@ -1,8 +1,7 @@
 /* exported toObject */
 function toObject(keyValuePair) {
-  const newObject = {};
-  keyValuePair.forEach(key => {
-    newObject[key] = key + 1;
-  });
+  const newObject = {
+    keyValuePair[0]: keyValuePair[1]
+  };
   return newObject;
 }
