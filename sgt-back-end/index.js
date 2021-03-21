@@ -44,6 +44,62 @@ app.post('/api/grades/', (req, res) => {
   }
 });
 
+app.put('/api/grades/:gradeId', (req, res) => {
+  const gradeId = parseInt(req.params.gradeId, 10);
+  const values = [req.body.name, req.body.course, req.body.score, gradeId];
+  if (!req.body || !req.body.name || !req.body.course || !req.body.score || !Number.isInteger(gradeId) || gradeId <= 0 || (req.body.score > 100 || req.body.score < 1)) {
+    const contentError = {
+      error: 'invalid grade supplied'
+    };
+    res.status(400).json(contentError);
+  } else {
+    const sql = `
+      update "grades"
+      set "name" = $1,
+          "course" = $2,
+          "score" = $3
+      where "gradeId" = $4`;
+    const params = values;
+    db.query(sql, params)
+      .then(result => {
+        const grade = result.rowCount;
+        if (grade === 0) {
+          res.status(404).json({
+            error: `Cannot find grade with gradeId ${gradeId}`
+          });
+        } else {
+          res.json(grade);
+        }
+      });
+  }
+});
+
+app.delete('/api/grades/:gradeId', (req, res) => {
+  const gradeId = parseInt(req.params.gradeId, 10);
+  if (!Number.isInteger(gradeId) || gradeId <= 0) {
+    const contentError = {
+      error: 'invalid grade supplied'
+    };
+    res.status(400).json(contentError);
+  } else {
+    const sql = `
+      delete from "grades"
+      where "gradeId" = $1`;
+    const params = [gradeId];
+    db.query(sql, params)
+      .then(result => {
+        const grade = result.rowCount;
+        if (grade === 0) {
+          res.status(404).json({
+            error: `Cannot find grade with gradeId ${gradeId}`
+          });
+        } else {
+          res.status(204).json();
+        }
+      });
+  }
+});
+
 app.listen(3000, () => {
   console.log('Listening very intently!');
 });
