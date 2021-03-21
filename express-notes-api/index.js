@@ -49,11 +49,17 @@ app.post('/api/notes', (req, res) => {
     req.body.id = data.nextId;
     data.notes[req.body.id] = req.body;
 
-    res.send(req.body);
     data.nextId++;
     const newInput = JSON.stringify(data, null, 2);
     fs.writeFile('data.json', newInput, 'utf8', err => {
-      if (err) throw err;
+      if (err) {
+        const unexpectedError = {
+          error: 'An unexpected error occured.'
+        };
+        res.status(500).json(unexpectedError);
+        console.error(err);
+      }
+      res.send(req.body);
     });
   }
 });
@@ -70,10 +76,16 @@ app.delete('/api/notes/:id', (req, res) => {
       res.status(404).json(missingError);
     } else {
       delete data.notes[req.params.id];
-      res.status(204).json();
       const newInput = JSON.stringify(data, null, 2);
       fs.writeFile('data.json', newInput, 'utf8', err => {
-        if (err) throw err;
+        if (err) {
+          const unexpectedError = {
+            error: 'An unexpected error occured.'
+          };
+          res.status(500).json(unexpectedError);
+          console.error(err);
+        }
+        res.status(204).json();
       });
     }
   }
@@ -99,10 +111,16 @@ app.put('/api/notes/:id', (req, res) => {
   } else {
     req.body.id = parseInt(req.params.id);
     data.notes[req.params.id] = req.body;
-    res.status(200).json(req.body);
     const newInput = JSON.stringify(data, null, 2);
     fs.writeFile('data.json', newInput, 'utf8', err => {
-      if (err) throw err;
+      if (err) {
+        const unexpectedError = {
+          error: 'An unexpected error occured.'
+        };
+        res.status(500).json(unexpectedError);
+        console.error(err);
+      }
+      res.status(200).json(req.body);
     });
   }
 });
