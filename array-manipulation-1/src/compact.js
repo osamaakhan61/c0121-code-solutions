@@ -1,9 +1,10 @@
 /* exported compact */
 function compact(array) {
   const newArray = [];
-  for (const i of array) {
-    i && newArray.push(i);
+  for (var i = 0; i < array.length; i++) {
+    if (array[i]) {
+      newArray.push(array[i]);
+    }
   }
-  array = newArray;
-  return array;
+  return newArray;
 }
