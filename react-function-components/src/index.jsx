@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class CustomButton extends React.Component {
-  render() {
-    return <button>Click Me!</button>;
-  }
+function CustomButton() {
+  return <button>Click Me!</button>;
 }
 
 const element = <CustomButton />;
