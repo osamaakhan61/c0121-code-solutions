@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CustomButton from './hot-button';
 
-class CustomButton extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      buttonTemp: 0
-    };
-  }
+const element = <CustomButton />;
 
-}
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
