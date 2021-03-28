@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-class ToggleButton extends React.Component {
+class ToggleSwitch extends React.Component {
   constructor(prop) {
     super(prop);
     this.state = {
@@ -10,19 +9,21 @@ class ToggleButton extends React.Component {
     this.handleToggle = this.handleToggle.bind(this);
   }
 
-  handleToggleOn() {
-    this.setState({ toggleState: true });
-  }
-
-  handleToggleOff() {
-    this.setState({ toggleState: false });
+  handleToggle(event) {
+    this.setState({ toggleState: event.target.checked });
   }
 
   render() {
     return (
-      <button></button>
+      <div className="container">
+        <label className="switch-box">
+        <input onChange={this.handleToggle} type="checkbox" />
+        <span className="circle"></span>
+        </label>
+        <p>{this.state.toggleState ? 'on' : 'off'}</p>
+      </div>
     );
   }
 }
 
-export default ToggleButton;
+export default ToggleSwitch;

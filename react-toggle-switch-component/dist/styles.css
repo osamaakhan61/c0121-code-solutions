@@ -3,3 +3,66 @@
   padding: 0;
   margin: 0;
 }
+
+#root {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.switch-box {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+input {
+  display: none;
+}
+
+.circle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+  border-radius: 30px;
+  border: 1px black solid;
+  transition: 0.5s;
+}
+
+.circle::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 26px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .circle {
+  background-color: rgb(2, 173, 2);
+}
+
+input:checked + .circle::before {
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+p {
+  padding-left: 20px;
+}
