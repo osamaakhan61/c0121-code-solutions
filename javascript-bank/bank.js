@@ -9,7 +9,7 @@ Bank.prototype.openAccount = function (holder, balance) {
     return null;
   } else {
     var newAccount = new Account(this.nextAccountNumber, holder);
-    newAccount.transactions.push(new Transaction('deposit', balance));
+    newAccount.transactions.push(newAccount.deposit(balance));
     this.accounts.push(newAccount);
     this.nextAccountNumber++;
     return newAccount.number;
@@ -27,13 +27,7 @@ Bank.prototype.getAccount = function (number) {
 Bank.prototype.getTotalAssets = function () {
   var totalBalance = 0;
   for (var i = 0; i < this.accounts.length; i++) {
-    for (var j = 0; j < this.accounts[i].transactions.length; j++) {
-      if (this.accounts[i].transactions[j].type === 'deposit') {
-        totalBalance += this.accounts[i].transactions[j].amount;
-      } else {
-        totalBalance -= this.accounts[i].transactions[j].amount;
-      }
-    }
+    totalBalance += this.accounts[i].getBalance();
   }
   return totalBalance;
 };
