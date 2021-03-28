@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 20px 50px;
+}
+
+.cold {
+  background-color: rgb(75, 10, 119);
+  color: rgb(255, 255, 255);
+}
+
+.cool {
+  background-color: rgb(200, 80, 255);
+  color: rgb(255, 255, 255);
+}
+
+.warm {
+  background-color: rgb(255, 78, 78);
+  color: rgb(255, 255, 255);
+}
+
+.hot {
+  background-color: rgb(255, 165, 0);
+}
+
+.hotter {
+  background-color: rgb(255, 255, 0);
+}
+
+.hottest {
+  background-color: rgb(255, 255, 255);
+}
