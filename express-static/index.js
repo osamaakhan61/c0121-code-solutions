@@ -9,5 +9,4 @@ app.use(fileServe);
 
 app.listen(3000, () => {
   console.log('Listening very intently to your request!');
-  console.log(absPath);
 });
