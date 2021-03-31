@@ -58,7 +58,7 @@ app.post('/api/auth/sign-in', (req, res, next) => {
   const params = [username];
   db.query(sql, params)
     .then(result => {
-      if (!result) {
+      if (result.rows[0] === undefined) {
         throw new ClientError(401, 'invalid login');
       }
 
