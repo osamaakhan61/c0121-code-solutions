@@ -1,0 +1,25 @@
+User can sign up:
+App.jsx is the parent component that handles the rendering of the correct components for the app. If the user is signing up, App.jsx will render the correct version of auth.jsx.
+AppContext within App.jsx is also providing the user information to the auth and auth-form componenents when the user is entering them.
+app-context.js allows context to be exported to the main app and initializes the context api.
+Auth and auth-form.jsx are being rendered initially as the welcome page for the user when they are trying to sign in or sign up.
+If the user clicks 'Register' then auth-form re-renders the modal with new text allowing the user to sign-up.
+The handleChange method captures the user input for the username and password and once the user clicks register, the handlesubmit method will initiate a POST request
+to the server.
+If the username and password are valid then the server will use the argon2 algorithm to hash the password and send an SQL query to the database.
+If the query is successful, the user's information will be successfully stored and the user is signed up.
+
+User can sign in:
+Auth and auth-form.jsx are being rendered initially as the welcome page for the user when they are trying to sign in or sign up.
+Once again, auth-form will use the handleChange method to capture the user's input while handlesubmit will capture the user clicking on the sign-in button and sending a POST request.
+When the user is signing in, the POST method is called to communicate with the server and index.js will send the request to the server in the form of a database query (SQL).
+If the user exists and the hashedpassword stored in the database matches up to the user password (using argon2.verify) then a token will be issued authenticating the user. This is sent back
+to the client, allowing them to sign in and authenticate successfully. Once the user is authenticated, app.jsx will call on the home.jsx page and that will get rendered, showing the rick-roll gif.
+
+User can stay signed in:
+App.jsx saves the token to localstorage when the user signs in to allow a user to refresh the page and stay signed in. This is achieved by importing the decodetoken from decode-token.js.
+Under the componentdidmount method, localstorage is retrieved and checked to see if a token exists. If there is a token then the token is decoded allowing the user to stay signed in and changing the isAuthorizing state to false, rendering the page again.
+
+User can sign out:
+The user can click on sign out on the navbar. This is rendered by navbar.jsx which contains a context for the handleSignOut method. Once that method is called, app.jsx initiates it's method call of handleSignOut where the token is removed from localStorage for the user
+as well as changing the state of the user to null. Once that happens, the user is redirected to the auth-form/auth page again where they need to sign in.
